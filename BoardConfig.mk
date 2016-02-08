@@ -27,6 +27,7 @@ TARGET_BOOTLOADER_BOARD_NAME := MSM8974
 TARGET_NO_BOOTLOADER := true
 TARGET_NO_RADIOIMAGE := true
 
+
 # Platform
 TARGET_BOARD_PLATFORM := msm8974
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno330
@@ -44,7 +45,7 @@ TARGET_BOARD_INFO_FILE ?= $(PLATFORM_PATH)/board-info.txt
 # Kernel
 BOARD_CUSTOM_BOOTIMG_MK := $(PLATFORM_PATH)/mkbootimg.mk
 BOARD_KERNEL_BASE := 0x00000000
-BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=bacon user_debug=31 msm_rtb.filter=0x3F ehci-hcd.park=3 androidboot.bootdevice=msm_sdcc.1
+BOARD_KERNEL_CMDLINE := console=tty0 selinux=permissive androidboot.hardware=bacon user_debug=31 msm_rtb.filter=0x3F ehci-hcd.park=3 androidboot.bootdevice=msm_sdcc.1 debug
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_SEPARATED_DT := true
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000 --tags_offset 0x01e00000
@@ -145,6 +146,9 @@ TARGET_USES_ION := true
 USE_OPENGL_RENDERER := true
 VSYNC_EVENT_PHASE_OFFSET_NS := 7500000
 
+# libinit_bacon
+include $(PLATFORM_PATH)/init/Android.mk
+
 # Init
 TARGET_INIT_VENDOR_LIB := libinit_bacon
 
@@ -169,8 +173,6 @@ TARGET_RECOVERY_FSTAB := $(PLATFORM_PATH)/rootdir/etc/fstab.bacon
 # RPC
 TARGET_NO_RPC := true
 
-# SELinux
-include device/qcom/sepolicy/sepolicy.mk
 
 BOARD_SEPOLICY_DIRS += \
     $(PLATFORM_PATH)/sepolicy
@@ -191,6 +193,7 @@ TARGET_WCNSS_MAC_PREFIX          := e8bba8
 WIFI_DRIVER_FW_PATH_STA          := "sta"
 WIFI_DRIVER_FW_PATH_AP           := "ap"
 WPA_SUPPLICANT_VERSION           := VER_0_8_X
+
 
 # inherit from the proprietary version
 ifneq ($(QCPATH),)

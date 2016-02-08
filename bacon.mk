@@ -42,7 +42,6 @@ PRODUCT_PACKAGES += \
 # ANT+
 PRODUCT_PACKAGES += \
     AntHalService \
-    com.dsi.ant.antradio_library \
     libantradio
 
 # Audio
@@ -127,8 +126,9 @@ PRODUCT_PACKAGES += \
     liboverlay
 
 # GPS
-PRODUCT_PACKAGES += \
-    gps.msm8974
+#PRODUCT_PACKAGES += \
+#   gps.msm8974
+
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gps/gps.conf:system/etc/gps.conf \
@@ -200,7 +200,6 @@ PRODUCT_COPY_FILES += \
 
 # Permissions
 PRODUCT_COPY_FILES += \
-    external/ant-wireless/antradio-library/com.dsi.ant.antradio_library.xml:system/etc/permissions/com.dsi.ant.antradio_library.xml \
     frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
     frameworks/native/data/etc/android.hardware.audio.low_latency.xml:system/etc/permissions/android.hardware.audio.low_latency.xml \
     frameworks/native/data/etc/android.hardware.bluetooth_le.xml:system/etc/permissions/android.hardware.bluetooth_le.xml \
@@ -210,7 +209,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.location.gps.xml:system/etc/permissions/android.hardware.location.gps.xml \
     frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml \
     frameworks/native/data/etc/android.hardware.nfc.hce.xml:system/etc/permissions/android.hardware.nfc.hce.xml \
-    frameworks/base/nfc-extras/com.android.nfc_extras.xml:system/etc/permissions/com.android.nfc_extras.xml \
     frameworks/native/data/etc/android.hardware.sensor.accelerometer.xml:system/etc/permissions/android.hardware.sensor.accelerometer.xml \
     frameworks/native/data/etc/android.hardware.sensor.compass.xml:system/etc/permissions/android.hardware.compass.xml \
     frameworks/native/data/etc/android.hardware.sensor.light.xml:system/etc/permissions/android.hardware.sensor.light.xml \
@@ -307,7 +305,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.default_network=9
 
 # Call the proprietary setup
-$(call inherit-product-if-exists, vendor/oneplus/bacon/bacon-vendor.mk)
+$(call inherit-product, vendor/oneplus/bacon/bacon-vendor.mk)
 
 ifneq ($(QCPATH),)
 $(call inherit-product-if-exists, $(QCPATH)/prebuilt_HY11/target/product/msm8974/prebuilt.mk)
