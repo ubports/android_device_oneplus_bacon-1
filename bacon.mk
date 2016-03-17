@@ -30,7 +30,6 @@ PRODUCT_PACKAGES += \
 
 # Ramdisk
 PRODUCT_PACKAGES += \
-    libinit_bacon \
     fstab.bacon \
     init.bacon.rc \
     init.qcom-common.rc \
@@ -305,7 +304,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.default_network=9
 
 # Call the proprietary setup
-$(call inherit-product, vendor/oneplus/bacon/bacon-vendor.mk)
+$(call inherit-product-if-exists, vendor/oneplus/bacon/bacon-vendor.mk)
 
 ifneq ($(QCPATH),)
 $(call inherit-product-if-exists, $(QCPATH)/prebuilt_HY11/target/product/msm8974/prebuilt.mk)

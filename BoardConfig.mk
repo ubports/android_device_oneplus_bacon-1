@@ -147,10 +147,10 @@ USE_OPENGL_RENDERER := true
 VSYNC_EVENT_PHASE_OFFSET_NS := 7500000
 
 # libinit_bacon
-include $(PLATFORM_PATH)/init/Android.mk
+# include $(PLATFORM_PATH)/init/Android.mk
 
 # Init
-TARGET_INIT_VENDOR_LIB := libinit_bacon
+# TARGET_INIT_VENDOR_LIB := libinit_bacon
 
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
