@@ -38,6 +38,10 @@ PRODUCT_PACKAGES += \
     init.recovery.qcom.rc \
     ueventd.bacon.rc
 
+# Recovery
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/rootdir/etc/fstab.bacon:recovery/root/etc/fstab
+
 # ANT+
 PRODUCT_PACKAGES += \
     AntHalService \
