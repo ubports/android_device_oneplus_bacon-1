@@ -3,10 +3,10 @@ OnePlus One
 
 Basic   | Spec Sheet
 -------:|:-------------------------
-Chipset | Qualcomm MSM8974AC Snapdragon 801
-CPU     | Quad-core 2.5 GHz Krait 400
+Chipset | Qualcomm Snapdragon 801 MSM8974PRO-AC
+CPU     | 2.5 GHz (2457 MHz) quad-core Krait 400
 GPU     | Adreno 330
-Memory  | 3GB
+Memory  | 3GB 1866 MHz LPDDR3
 OS      | Android OS, v4.4.2 (KitKat), upgradable to v6.0.1 (Marshmallow)
 Storage | 16/64GB
 Battery | 3100 mAh
