@@ -14,4 +14,4 @@ Display | 5.5"  1080x1920 px
 Rear Camera  | 13MPx,  dual-LED flash
 Front Camera  | 5MPx
 
-![OnePlus One](http://isticktoit.net/wp-content/uploads/2016/08/Nexus-5-Ubuntu-Touch-small.png "OnePlus One")
+![OnePlus One](http://i1-news.softpedia-static.com/images/news2/OnePlus-One-with-Ubuntu-Touch-Mockup-Looks-Stunning-466623-2.jpg "OnePlus One")
