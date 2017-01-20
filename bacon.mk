@@ -29,23 +29,27 @@ PRODUCT_PACKAGES += \
     init.qcom.bt.sh
 
 # Ramdisk
-PRODUCT_PACKAGES += \
-    fstab.bacon \
-    init.bacon.rc \
-    init.qcom-common.rc \
-    init.qcom.power.rc \
-    init.qcom.usb.rc \
-    init.recovery.qcom.rc \
-    ueventd.bacon.rc
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/rootdir/root/fstab.bacon:root/fstab.bacon \
+	$(LOCAL_PATH)/rootdir/root/init.bacon.rc:root/init.bacon.rc \
+	$(LOCAL_PATH)/rootdir/root/init.qcom-common.rc:root/init.qcom-common.rc \
+	$(LOCAL_PATH)/rootdir/root/init.qcom.power.rc:root/init.qcom.power.rc \
+	$(LOCAL_PATH)/rootdir/root/init.qcom.usb.rc:root/init.qcom.usb.rc \
+	$(LOCAL_PATH)/rootdir/root/ueventd.qcom.rc:root/ueventd.bacon.rc \
+	$(LOCAL_PATH)/rootdir/root/init_bt.sh:system/etc/init_bt.sh \
+	$(LOCAL_PATH)/rootdir/root/init_wlan.sh:system/etc/init_wlan.sh
 
 # Recovery
 PRODUCT_COPY_FILES += \
-	$(LOCAL_PATH)/rootdir/etc/fstab.bacon:recovery/root/etc/fstab
+	$(LOCAL_PATH)/rootdir/root/fstab.bacon:recovery/root/etc/fstab
 
 # ANT+
 PRODUCT_PACKAGES += \
     AntHalService \
     libantradio
+
+PRODUCT_PACKAGES += \
+    conn_init
 
 # Audio
 PRODUCT_COPY_FILES += \
@@ -252,7 +256,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/WCNSS_cfg.dat:system/etc/firmware/wlan/prima/WCNSS_cfg.dat \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini \
-    $(LOCAL_PATH)/wifi/WCNSS_qcom_wlan_nv.bin:system/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
+    $(LOCAL_PATH)/wifi/WCNSS_qcom_wlan_nv.bin:system/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin \
+    $(LOCAL_PATH)/wifi/WCNSS_qcom_wlan_nv.bin:system/etc/wifi/WCNSS_qcom_wlan_nv.bin \
+    $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:system/etc/firmware/wlan/prima/WCNSS_qcom_cfg.ini
+
 
 PRODUCT_PACKAGES += \
     dhcpcd.conf \
@@ -267,7 +274,8 @@ PRODUCT_PACKAGES += \
     hostapd.deny
 
 PRODUCT_PACKAGES += \
-    wcnss_service
+    wcnss_service \
+    conn_init
 
 # Misc dependency packages
 PRODUCT_PACKAGES += \
@@ -316,3 +324,5 @@ endif
 
 # Inherit from oppo-common
 $(call inherit-product, device/oppo/common/common.mk)
+
+$(call inherit-product, $(LOCAL_PATH)/mdt.mk)

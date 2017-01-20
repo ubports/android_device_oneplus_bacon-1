@@ -56,3 +56,24 @@ service fuse_usbdisk /system/bin/sdcard -u 1023 -g 1023 -w 1023 -d /mnt/media_rw
     class late_start
     disabled
 
+service init_wlan /system/bin/sh /system/etc/init_wlan.sh
+    class main
+    user root
+    group root
+    oneshot
+
+service hciattach /system/bin/sh /system/etc/init_bt.sh
+    class main
+    user bluetooth
+    group qcom_oncrpc bluetooth net_bt_admin system
+    disabled
+    oneshot
+
+on property:bluetooth.hciattach=true
+    write /sys/module/hci_smd/parameters/hcismd_set 1
+
+on property:bluetooth.hciattach=false
+     write /sys/module/hci_smd/parameters/hcismd_set 0
+
+
+
