@@ -24,10 +24,6 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay vendor/extra/overlays/phone-108
 # Haters gonna hate..
 PRODUCT_CHARACTERISTICS := nosdcard
 
-# Config scripts
-PRODUCT_PACKAGES += \
-    init.qcom.bt.sh
-
 # Ramdisk
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/rootdir/root/fstab.bacon:root/fstab.bacon \
@@ -36,8 +32,7 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/rootdir/root/init.qcom.power.rc:root/init.qcom.power.rc \
 	$(LOCAL_PATH)/rootdir/root/init.qcom.usb.rc:root/init.qcom.usb.rc \
 	$(LOCAL_PATH)/rootdir/root/ueventd.qcom.rc:root/ueventd.bacon.rc \
-	$(LOCAL_PATH)/rootdir/root/init_bt.sh:system/etc/init_bt.sh \
-	$(LOCAL_PATH)/rootdir/root/init_wlan.sh:system/etc/init_wlan.sh
+	$(LOCAL_PATH)/rootdir/root/init_wlan_bt.sh:system/etc/init_wlan_bt.sh
 
 # Recovery
 PRODUCT_COPY_FILES += \
