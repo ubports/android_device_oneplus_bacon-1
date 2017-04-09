@@ -310,6 +310,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.call_ring.multiple=0 \
     ro.telephony.default_network=9
 
+# Ubuntu Overlay
+    device/oneplus/bacon/ubuntu/android.conf:system/ubuntu/etc/ubuntu-touch-session.d/android.conf \ #FIX Bootsplash Resolution
+    device/oneplus/bacon/ubuntu/bacon.conf:system/ubuntu/etc/ubuntu-touch-session.d/bacon.conf \
+    device/oneplus/bacon/ubuntu/android-tools-adbd.conf:system/ubuntu/etc/init/android-tools-adbd.conf \
+    device/oneplus/bacon/ubuntu/70-bacon.rules:system/ubuntu/usr/lib/lxc-android-config/70-bacon.rules
+
 # Call the proprietary setup
 $(call inherit-product-if-exists, vendor/oneplus/bacon/bacon-vendor.mk)
 
