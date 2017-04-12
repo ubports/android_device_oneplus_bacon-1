@@ -317,7 +317,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     device/oneplus/bacon/ubuntu/70-bacon.rules:system/ubuntu/usr/lib/lxc-android-config/70-bacon.rules
 
 #This keeps time correct across reboots
-		PRODUCT_PACKAGES += timekeep
+    PRODUCT_PACKAGES += timekeep
 
 # Call the proprietary setup
 $(call inherit-product-if-exists, vendor/oneplus/bacon/bacon-vendor.mk)
