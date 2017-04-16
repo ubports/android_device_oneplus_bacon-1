@@ -36,7 +36,8 @@ PRODUCT_COPY_FILES += \
 
 # Recovery
 PRODUCT_COPY_FILES += \
-	$(LOCAL_PATH)/rootdir/root/fstab.bacon:recovery/root/etc/fstab
+	$(LOCAL_PATH)/rootdir/root/recovery.fstab:recovery/root/etc/fstab \
+	$(LOCAL_PATH)/rootdir/root/recovery.fstab:recovery/root/etc/recovery.fstab
 
 # ANT+
 PRODUCT_PACKAGES += \
