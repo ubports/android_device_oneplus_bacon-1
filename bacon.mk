@@ -34,6 +34,13 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/rootdir/root/ueventd.qcom.rc:root/ueventd.bacon.rc \
 	$(LOCAL_PATH)/rootdir/root/init_wlan_bt.sh:system/etc/init_wlan_bt.sh
 
+# Ubuntu Overlay Files
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/ubuntu/adbd.conf:system/ubuntu/etc/init/adbd.conf \
+    $(LOCAL_PATH)/ubuntu/70-bacon.rules:system/ubuntu/usr/lib/lxc-android-config/70-bacon.rules \
+    $(LOCAL_PATH)/ubuntu/config.xml:system/ubuntu/usr/share/repowerd/device-configs/config-bacon.xml \
+    $(LOCAL_PATH)/ubuntu/ofono.override:system/ubuntu/etc/init/ofono.override
+
 # Recovery
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/rootdir/root/recovery.fstab:recovery/root/etc/fstab \
