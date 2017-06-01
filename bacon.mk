@@ -52,9 +52,6 @@ PRODUCT_PACKAGES += \
     AntHalService \
     libantradio
 
-PRODUCT_PACKAGES += \
-    conn_init
-
 # Audio
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/acdb/MTP_Bluetooth_cal.acdb:system/etc/acdbdata/MTP/MTP_Bluetooth_cal.acdb \
