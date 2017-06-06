@@ -341,6 +341,16 @@ service sensors /system/bin/sensors.qcom
     user root
     group root
 
+on property:init.svc.sensorservice=running
+    start unblock_wakelock
+
+service unblock_wakelock /system/bin/sh /system/etc/unblock_wakelock.sh
+    class main
+    user root
+    group root
+    disabled
+    oneshot
+
 # Adjust socket buffer to enlarge TCP receive window for high bandwidth
 # but only if ro.data.large_tcp_window_size property is set.
 on property:ro.data.large_tcp_window_size=true
