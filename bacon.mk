@@ -141,8 +141,8 @@ PRODUCT_PACKAGES += \
     liboverlay
 
 # GPS
-#PRODUCT_PACKAGES += \
-#   gps.msm8974
+PRODUCT_PACKAGES += \
+   gps.msm8974
 
 
 PRODUCT_COPY_FILES += \
