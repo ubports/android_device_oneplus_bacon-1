@@ -43,6 +43,11 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/ubuntu/android.conf:system/ubuntu/etc/ubuntu-touch-session.d/android.conf \
     $(LOCAL_PATH)/ubuntu/android.conf:system/ubuntu/etc/ubuntu-touch-session.d/bacon.conf \
     $(LOCAL_PATH)/ubuntu/bluetooth-touch-bacon.conf:system/ubuntu/etc/init/bluetooth-touch-bacon.conf
+    
+    
+# Enable ubuntu aethercast
+PRODUCT_PROPERTY_OVERRIDES += \
+    ubuntu.widi.supported=1
 
 # Recovery
 PRODUCT_COPY_FILES += \
