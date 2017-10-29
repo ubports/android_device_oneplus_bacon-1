@@ -55,6 +55,10 @@ on boot
     chmod 0660 /dev/ttyHS2
     chown bluetooth bluetooth /dev/ttyHS2
 
+    #Timekeep // this is a temporary fix to opo
+    mkdir /data/time
+    chmod 777 /data/time
+
     #Create QMUX deamon socket area
     mkdir /dev/socket/qmux_radio 0770 radio radio
     chmod 2770 /dev/socket/qmux_radio
