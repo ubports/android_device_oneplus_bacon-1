@@ -327,6 +327,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.extension_library=libqti-perfd-client.so \
     ro.telephony.call_ring.multiple=0 \
     ro.telephony.default_network=9
+    
+#This keeps time correct across reboots
+PRODUCT_PACKAGES += timekeep
 
 # Call the proprietary setup
 $(call inherit-product-if-exists, vendor/oneplus/bacon/bacon-vendor.mk)
