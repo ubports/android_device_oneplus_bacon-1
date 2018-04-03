@@ -47,6 +47,8 @@ on post-fs-data
     # Torch
     chown system camera /sys/class/leds/torch-light/brightness
     chmod 0660 /sys/class/leds/torch-light/brightness
+    chmod 0660 /sys/class/leds/led\:flash_torch/brightness
+
 
 # virtual sdcard daemon running as media_rw (1023)
 service sdcard /system/bin/sdcard -u 1023 -g 1023 -l /data/media /mnt/shell/emulated
@@ -67,6 +69,3 @@ on property:bluetooth.hciattach=true
 
 on property:bluetooth.hciattach=false
      write /sys/module/hci_smd/parameters/hcismd_set 0
-
-
-
