@@ -42,9 +42,12 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/ubuntu/ofono.override:system/ubuntu/etc/init/ofono.override \
     $(LOCAL_PATH)/ubuntu/android.conf:system/ubuntu/etc/ubuntu-touch-session.d/android.conf \
     $(LOCAL_PATH)/ubuntu/android.conf:system/ubuntu/etc/ubuntu-touch-session.d/bacon.conf \
-    $(LOCAL_PATH)/ubuntu/bluetooth-touch-bacon.conf:system/ubuntu/etc/init/bluetooth-touch-bacon.conf
-    
-    
+    $(LOCAL_PATH)/ubuntu/bluetooth-touch-bacon.conf:system/ubuntu/etc/init/bluetooth-touch-bacon.conf \
+		$(LOCAL_PATH)/ubuntu/acdbdata:system/ubuntu/etc/acdbdata \
+		$(LOCAL_PATH)/ubuntu/mixer_paths.xml:system/ubuntu/etc/mixer_paths.xml
+
+
+
 # Enable ubuntu aethercast
 PRODUCT_PROPERTY_OVERRIDES += \
     ubuntu.widi.supported=1
@@ -327,7 +330,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.extension_library=libqti-perfd-client.so \
     ro.telephony.call_ring.multiple=0 \
     ro.telephony.default_network=9
-    
+
 #This keeps time correct across reboots
 PRODUCT_PACKAGES += timekeep
 
