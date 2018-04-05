@@ -34,17 +34,23 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/rootdir/root/ueventd.qcom.rc:root/ueventd.bacon.rc \
 	$(LOCAL_PATH)/rootdir/root/init_wlan_bt.sh:system/etc/init_wlan_bt.sh
 
-# Ubuntu Overlay Files
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/ubuntu/adbd.conf:system/ubuntu/etc/init/adbd.conf \
-    $(LOCAL_PATH)/ubuntu/70-bacon.rules:system/ubuntu/usr/lib/lxc-android-config/70-bacon.rules \
-    $(LOCAL_PATH)/ubuntu/config.xml:system/ubuntu/usr/share/repowerd/device-configs/config-bacon.xml \
-    $(LOCAL_PATH)/ubuntu/ofono.override:system/ubuntu/etc/init/ofono.override \
-    $(LOCAL_PATH)/ubuntu/android.conf:system/ubuntu/etc/ubuntu-touch-session.d/android.conf \
-    $(LOCAL_PATH)/ubuntu/android.conf:system/ubuntu/etc/ubuntu-touch-session.d/bacon.conf \
-    $(LOCAL_PATH)/ubuntu/bluetooth-touch-bacon.conf:system/ubuntu/etc/init/bluetooth-touch-bacon.conf \
-		$(LOCAL_PATH)/ubuntu/acdbdata:system/ubuntu/etc/acdbdata \
-		$(LOCAL_PATH)/ubuntu/mixer_paths.xml:system/ubuntu/etc/mixer_paths.xml
+	# Ubuntu Overlay Files
+	PRODUCT_COPY_FILES += \
+	    $(LOCAL_PATH)/ubuntu/adbd.conf:system/ubuntu/etc/init/adbd.conf \
+	    $(LOCAL_PATH)/ubuntu/70-bacon.rules:system/ubuntu/usr/lib/lxc-android-config/70-bacon.rules \
+	    $(LOCAL_PATH)/ubuntu/config.xml:system/ubuntu/usr/share/repowerd/device-configs/config-bacon.xml \
+	    $(LOCAL_PATH)/ubuntu/ofono.override:system/ubuntu/etc/init/ofono.override \
+	    $(LOCAL_PATH)/ubuntu/android.conf:system/ubuntu/etc/ubuntu-touch-session.d/android.conf \
+	    $(LOCAL_PATH)/ubuntu/android.conf:system/ubuntu/etc/ubuntu-touch-session.d/bacon.conf \
+	    $(LOCAL_PATH)/ubuntu/bluetooth-touch-bacon.conf:system/ubuntu/etc/init/bluetooth-touch-bacon.conf \
+	    $(LOCAL_PATH)/ubuntu/acdb/MTP_Bluetooth_cal.acdb:system/ubuntu/etc/acdbdata/MTP/MTP_Bluetooth_cal.acdb \
+	    $(LOCAL_PATH)/ubuntu/acdb/MTP_General_cal.acdb:system/ubuntu/etc/acdbdata/MTP/MTP_General_cal.acdb \
+	    $(LOCAL_PATH)/ubuntu/acdb/MTP_Global_cal.acdb:system/ubuntu/etc/acdbdata/MTP/MTP_Global_cal.acdb \
+	    $(LOCAL_PATH)/ubuntu/acdb/MTP_Handset_cal.acdb:system/ubuntu/etc/acdbdata/MTP/MTP_Handset_cal.acdb \
+	    $(LOCAL_PATH)/ubuntu/acdb/MTP_Hdmi_cal.acdb:system/ubuntu/etc/acdbdata/MTP/MTP_Hdmi_cal.acdb \
+	    $(LOCAL_PATH)/ubuntu/acdb/MTP_Headset_cal.acdb:system/ubuntu/etc/acdbdata/MTP/MTP_Headset_cal.acdb \
+	    $(LOCAL_PATH)/ubuntu/acdb/MTP_Speaker_cal.acdb:system/ubuntu/etc/acdbdata/MTP/MTP_Speaker_cal.acdb \
+	    $(LOCAL_PATH)/ubuntu/mixer_paths.xml:system/ubuntu/etc/mixer_paths.xml
 
 
 
