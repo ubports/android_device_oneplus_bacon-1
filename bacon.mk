@@ -43,13 +43,13 @@ PRODUCT_COPY_FILES += \
 	    $(LOCAL_PATH)/ubuntu/android.conf:system/ubuntu/etc/ubuntu-touch-session.d/android.conf \
 	    $(LOCAL_PATH)/ubuntu/android.conf:system/ubuntu/etc/ubuntu-touch-session.d/bacon.conf \
 	    $(LOCAL_PATH)/ubuntu/bluetooth-touch-bacon.conf:system/ubuntu/etc/init/bluetooth-touch-bacon.conf \
-	    $(LOCAL_PATH)/ubuntu/acdb/MTP_Bluetooth_cal.acdb:system/ubuntu/etc/acdbdata/MTP/MTP_Bluetooth_cal.acdb \
-	    $(LOCAL_PATH)/ubuntu/acdb/MTP_General_cal.acdb:system/ubuntu/etc/acdbdata/MTP/MTP_General_cal.acdb \
-	    $(LOCAL_PATH)/ubuntu/acdb/MTP_Global_cal.acdb:system/ubuntu/etc/acdbdata/MTP/MTP_Global_cal.acdb \
-	    $(LOCAL_PATH)/ubuntu/acdb/MTP_Handset_cal.acdb:system/ubuntu/etc/acdbdata/MTP/MTP_Handset_cal.acdb \
-	    $(LOCAL_PATH)/ubuntu/acdb/MTP_Hdmi_cal.acdb:system/ubuntu/etc/acdbdata/MTP/MTP_Hdmi_cal.acdb \
-	    $(LOCAL_PATH)/ubuntu/acdb/MTP_Headset_cal.acdb:system/ubuntu/etc/acdbdata/MTP/MTP_Headset_cal.acdb \
-	    $(LOCAL_PATH)/ubuntu/acdb/MTP_Speaker_cal.acdb:system/ubuntu/etc/acdbdata/MTP/MTP_Speaker_cal.acdb \
+	    $(LOCAL_PATH)/ubuntu/acdbdata/MTP_Bluetooth_cal.acdb:system/ubuntu/etc/acdbdata/MTP/MTP_Bluetooth_cal.acdb \
+	    $(LOCAL_PATH)/ubuntu/acdbdata/MTP_General_cal.acdb:system/ubuntu/etc/acdbdata/MTP/MTP_General_cal.acdb \
+	    $(LOCAL_PATH)/ubuntu/acdbdata/MTP_Global_cal.acdb:system/ubuntu/etc/acdbdata/MTP/MTP_Global_cal.acdb \
+	    $(LOCAL_PATH)/ubuntu/acdbdata/MTP_Handset_cal.acdb:system/ubuntu/etc/acdbdata/MTP/MTP_Handset_cal.acdb \
+	    $(LOCAL_PATH)/ubuntu/acdbdata/MTP_Hdmi_cal.acdb:system/ubuntu/etc/acdbdata/MTP/MTP_Hdmi_cal.acdb \
+	    $(LOCAL_PATH)/ubuntu/acdbdata/MTP_Headset_cal.acdb:system/ubuntu/etc/acdbdata/MTP/MTP_Headset_cal.acdb \
+	    $(LOCAL_PATH)/ubuntu/acdb/dataMTP_Speaker_cal.acdb:system/ubuntu/etc/acdbdata/MTP/MTP_Speaker_cal.acdb \
 	    $(LOCAL_PATH)/ubuntu/mixer_paths.xml:system/ubuntu/etc/mixer_paths.xml
 
 
