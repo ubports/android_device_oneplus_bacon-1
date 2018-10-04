@@ -23,3 +23,12 @@ ro.gps.agps_provider=1
 
 # cabl is handled by the panel
 ro.qualcomm.cabl=0
+
+#Fixes ubuntu-touch-861
+persist.audio.fluence.mode=fluence
+persist.audio.vr.enable=false
+persist.audio.handset.mic=analog
+persist.audio.voice.clarity=none
+persist.audio.fluence.voicecall=true
+persist.audio.fluence.voicerec=false
+persist.audio.fluence.speaker=true
