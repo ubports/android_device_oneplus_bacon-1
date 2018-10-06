@@ -19,7 +19,7 @@ import /init.qcom-common.rc
 on fs
     mount_all ./fstab.bacon
     restorecon_recursive /persist
-    setprop ro.crypto.fuse_sdcard true
+#    setprop ro.crypto.fuse_sdcard true
 
 on init
     # See storage config details at http://source.android.com/tech/storage/
@@ -35,10 +35,10 @@ on init
     export SECONDARY_STORAGE /storage/usbdisk
 
     # Support legacy paths
-    symlink /storage/emulated/legacy /sdcard
-    symlink /storage/emulated/legacy /mnt/sdcard
-    symlink /storage/emulated/legacy /storage/sdcard0
-    symlink /mnt/shell/emulated/0 /storage/emulated/legacy
+#    symlink /storage/emulated/legacy /sdcard
+#    symlink /storage/emulated/legacy /mnt/sdcard
+#    symlink /storage/emulated/legacy /storage/sdcard0
+#    symlink /mnt/shell/emulated/0 /storage/emulated/legacy
 
 on post-fs
     export_rc /system/etc/init.cne.rc
@@ -51,8 +51,8 @@ on post-fs-data
 
 
 # virtual sdcard daemon running as media_rw (1023)
-service sdcard /system/bin/sdcard -u 1023 -g 1023 -l /data/media /mnt/shell/emulated
-    class late_start
+#service sdcard /system/bin/sdcard -u 1023 -g 1023 -l /data/media /mnt/shell/emulated
+#    class late_start
 
 service fuse_usbdisk /system/bin/sdcard -u 1023 -g 1023 -w 1023 -d /mnt/media_rw/usbdisk /storage/usbdisk
     class late_start
