@@ -44,6 +44,8 @@ LOCAL_MODULE_PATH  := $(TARGET_OUT_ETC)/hostapd
 LOCAL_SRC_FILES    := hostapd.deny
 include $(BUILD_PREBUILT)
 
+# Workaround for broken / incompatible MAC addresses stored in NVRAM. Rather try to symlink to the config file in /persist, this seems to contain a valid MAC addy
+# See https://github.com/ubports/ubuntu-touch/issues/541
 $(shell mkdir -p $(PRODUCT_OUT)/$(TARGET_COPY_OUT_SYSTEM)/etc/firmware/wlan/prima)
 $(shell pushd $(PRODUCT_OUT)/$(TARGET_COPY_OUT_SYSTEM) > /dev/null && ln -s /persist/WCNSS_qcom_cfg.ini etc/firmware/wlan/prima/WCNSS_qcom_cfg.ini && popd > /dev/null)
 $(shell mkdir -p $(PRODUCT_OUT)/$(TARGET_COPY_OUT_SYSTEM)/etc/wifi)
