@@ -39,6 +39,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/ubuntu/adbd.conf:system/ubuntu/etc/init/adbd.conf \
     $(LOCAL_PATH)/ubuntu/70-bacon.rules:system/ubuntu/usr/lib/lxc-android-config/70-bacon.rules \
     $(LOCAL_PATH)/ubuntu/config.xml:system/ubuntu/usr/share/repowerd/device-configs/config-bacon.xml \
+    $(LOCAL_PATH)/ubuntu/config.xml:system/ubuntu/usr/share/repowerd/device-configs/config-A0001.xml \
     $(LOCAL_PATH)/ubuntu/ofono.override:system/ubuntu/etc/init/ofono.override \
     $(LOCAL_PATH)/ubuntu/android.conf:system/ubuntu/etc/ubuntu-touch-session.d/android.conf \
     $(LOCAL_PATH)/ubuntu/android.conf:system/ubuntu/etc/ubuntu-touch-session.d/bacon.conf \

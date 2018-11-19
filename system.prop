@@ -25,11 +25,6 @@ ro.gps.agps_provider=1
 ro.qualcomm.cabl=0
 
 #Fixes ubuntu-touch-861
-persist.audio.dualmic.config=endfire
-persist.audio.fluence.mode=fluence
-persist.audio.vr.enable=false
-persist.audio.handset.mic=analog
-persist.audio.voice.clarity=none
 persist.audio.fluence.voicecall=true
 persist.audio.fluence.voicerec=false
-persist.audio.fluence.speaker=true
+persist.audio.fluence.speaker=false
