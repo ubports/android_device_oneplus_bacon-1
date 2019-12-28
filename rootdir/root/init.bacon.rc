@@ -49,6 +49,14 @@ on post-fs-data
     chmod 0660 /sys/class/leds/torch-light/brightness
     chmod 0660 /sys/class/leds/led\:flash_torch/brightness
 
+    # gestures. gid 1004 is android_input
+    chown system 1004 /proc/touchpanel/double_tap_enable
+    chown system 1004 /proc/touchpanel/camera_enable
+    chown system 1004 /proc/touchpanel/music_enable
+    chown system 1004 /proc/touchpanel/flashlight_enable
+    chown system 1004 /proc/touchpanel/keypad_enable
+
+
 
 # virtual sdcard daemon running as media_rw (1023)
 #service sdcard /system/bin/sdcard -u 1023 -g 1023 -l /data/media /mnt/shell/emulated
