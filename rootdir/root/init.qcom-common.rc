@@ -248,19 +248,19 @@ on post-fs-data
     mkdir /data/audio/ 0770 media audio
 
     # Touchscreen
-    chown system radio /proc/touchpanel/double_tap_enable
+    chown system input /proc/touchpanel/double_tap_enable
     chmod 0660 /proc/touchpanel/double_tap_enable
 
-    chown root system /proc/touchpanel/camera_enable
+    chown root input /proc/touchpanel/camera_enable
     chmod 0660 /proc/touchpanel/camera_enable
 
-    chown root system /proc/touchpanel/music_enable
+    chown root input /proc/touchpanel/music_enable
     chmod 0660 /proc/touchpanel/music_enable
 
-    chown root system /proc/touchpanel/flashlight_enable
+    chown root input /proc/touchpanel/flashlight_enable
     chmod 0660 /proc/touchpanel/flashlight_enable
 
-    chown root system /proc/touchpanel/keypad_enable
+    chown root input /proc/touchpanel/keypad_enable
     chmod 0660 /proc/touchpanel/keypad_enable
 
     chown system system /sys/devices/virtual/graphics/fb0/cabc
