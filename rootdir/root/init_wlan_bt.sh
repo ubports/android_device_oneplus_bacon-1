@@ -7,8 +7,6 @@
 rm /data/misc/wifi/WCNSS_qcom_cfg.ini
 rm /data/misc/wifi/WCNSS_qcom_wlan_nv.bin
 
-logwrapper /system/bin/conn_init
-
 echo 1 > /dev/wcnss_wlan
 
 enable_bt () {
@@ -18,10 +16,10 @@ enable_bt () {
         fi
 
         #initialize bt device
-        /system/bin/hci_qcomm_init -e
-        sleep 1 
+        echo 0 > /sys/module/hci_smd/parameters/hcismd_set
+        /system/bin/logwrapper -k /system/bin/hci_qcomm_init -vvv -e
+        sleep 1
         echo 1 > /sys/module/hci_smd/parameters/hcismd_set
-
 
 }
 
