@@ -58,7 +58,7 @@ TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-linux-androideabi-
 BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := bacon,A0001
+TARGET_OTA_ASSERT_DEVICE := bacon
 
 # Audio
 BOARD_USES_ALSA_AUDIO := true
