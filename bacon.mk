@@ -219,15 +219,17 @@ PRODUCT_PACKAGES += \
 # Disable fake sensor service
 MINIMEDIA_SENSORSERVER_DISABLE := 1
 
-# telepathy-ofono quirks
+# Some overrides from default settings
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.t-o.quirk.forcesink=sink.primary \
-    ro.t-o.quirk.forcesource=source.primary
+    ro.t-o.quirk.forcesource=source.primary \
+    ro.ubuntu.camera_plugin=aal
 
 # Ubuntu Touch: USB port handling
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/ubuntu/usb/setupusb:system/bin/setupusb \
-    $(LOCAL_PATH)/ubuntu/usb/mtp-state.conf:system/halium/etc/init/mtp-state.conf \
+    $(LOCAL_PATH)/ubuntu/usb/mtp-state.conf:system/halium/etc/init/mtp-state.conf
+
 
 # for off charging mode
 PRODUCT_PACKAGES += \
